@@ -10,7 +10,7 @@ router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 
-router.post('/profile', forwardAuthenticated, (req, res) => res.render('profile'));
+
 
 
 
@@ -93,9 +93,7 @@ router.get('/logout', (req, res) => {
   req.flash('success_msg', 'You are logged out');
   res.redirect('/users/login');
 });
-// router.post('users/profile', (req, res, next) => {
-//   res.send("done")
-// });
+
 
 
 
