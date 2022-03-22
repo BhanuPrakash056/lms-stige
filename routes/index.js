@@ -16,4 +16,9 @@ router.get('/profile', ensureAuthenticated, (req, res) =>
     
   })
 );
+router.get('/task', ensureAuthenticated, (req, res) =>
+  res.render('task', {
+    user: req.user
+  })
+);
 module.exports = router;
